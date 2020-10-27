@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AvailableServicesComponent } from './available-services/available-services.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AvailableServicesComponent
+    AvailableServicesComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,
