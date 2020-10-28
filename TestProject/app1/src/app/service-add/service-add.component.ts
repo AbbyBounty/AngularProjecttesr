@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-service-add',
@@ -7,15 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceAddComponent implements OnInit {
 
-  service=0;
+  service = null;
   description = ``
-  price=0
-  serviceName=``
-  constructor() { }
+  price = 0
+  serviceName = ``
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.queryParams['id']
+    if(id){
+      console.log(id)
+    }
+
+   
   }
-  onUpdate(){
+  onUpdate() {
 
   }
 }
