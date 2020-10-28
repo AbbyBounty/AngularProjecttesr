@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from '../Service/service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-available-services',
@@ -8,16 +9,31 @@ import { Service } from '../Service/service';
 })
 export class AvailableServicesComponent implements OnInit {
 
-  services: Service[];
+  services =[
+
+   { "id":1	,"Service Name":"Full body service",	"Price":1200},
+   { "id":2	,"Service Name":"Oil Change",	"Price":1200},
+   { "id":3	,"Service Name":"Washing",	"Price":1200},
+   { "id":4	,"Service Name":"Air",	"Price":1200}
+
+  ];
 //  service:any={ };
-  constructor() {
-    this.services = [new Service(1, "Oil Change", 100),
-      new Service(2, "Air", 10),
-      new Service(3, "Chain Grissing", 100),
-      new Service(4, "Washing", 300)]
+  constructor( private router: Router) {
+  
   }
   ngOnInit(): void {
     
+  }
+
+  addService(){
+    
+  }
+
+  onEdit(service) {
+    this.router.navigate(['/service-add'], {queryParams: {id: service['id']}})
+  }
+addservice() {
+    this.router.navigate(['/service-add'])
   }
 
 }

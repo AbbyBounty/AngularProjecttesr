@@ -8,12 +8,17 @@ import { VendorregistraionComponent } from './vendorregistraion/vendorregistraio
 import { FormsModule} from '@angular/forms';
 import { CommonModule } from "@angular/common";
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { ServiceAddComponent } from './service-add/service-add.component';
+import { AvailableServicesComponent } from './available-services/available-services.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VendorregistraionComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    ServiceAddComponent,
+    AvailableServicesComponent,
+    ServiceAddComponent
   ],
   imports: [
     BrowserModule,
