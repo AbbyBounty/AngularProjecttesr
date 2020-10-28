@@ -4,17 +4,17 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Srvice No.</th>
+                <th scope="col">Service No.</th>
                 <th scope="col">Service Name</th>
                 <th scope="col">Price</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr *ngFor="let service of services; let i=index">
                 <th scope="row">1</th>
-                <td>{{serviceId}}</td>
-                <td> {{serviceName}}</td>
-                <td>{{price}} </td>
+                <td>{{service.serviceId}}</td>
+                <td> {{service.serviceName}}</td>
+                <td>{{service.price}} </td>
             </tr>
         </tbody>
     </table>
