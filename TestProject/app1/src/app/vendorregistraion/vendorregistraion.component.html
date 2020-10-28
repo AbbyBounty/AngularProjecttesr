@@ -1,0 +1,58 @@
+<p>VENDORREGISTRATION WORKS!</p>
+
+
+<table border="1" style="border-collapse:collapse" *ngIf="v.length > 0">
+<tr>
+      <th>VENDORID</th>
+      <th>FIRSTNAME/th>
+      <th>LASTNAME</th>
+      <th>ADDRESS</th>
+      <th>SHOPNAME</th>
+      <th>MOBILE NO</th>
+      <th>EMAIL</th>
+      <th>PASSWORD</th>
+      <th>LICENSE NUMBER</th>
+      <th>ESTABLISHMENT YEAR</th>
+      
+
+</tr>
+
+
+
+<tr *ngFor="let vendorreg of v;let i=index">
+    <td>{{vendorreg.vendorid}}</td>
+    <td>{{vendorreg.firstname | uppercase}}</td>
+    <td>{{vendorreg.lastname}}</td>
+    <td>{{vendorreg.vendoradd}}</td>
+    <td>{{vendorreg.shopname}}</td>
+    <td>{{vendorreg.mobile}}</td>
+    <td>{{vendorreg.email}}</td>
+    <td>{{vendorreg.password}}</td>
+    <td>{{vendorreg.licensenumber}}</td>
+    <td>{{vendorreg.vendoryear}}</td>
+    <td>{{i}}</td>
+    <td><a href="#" (click)="deleteVendorDetails(i)">delete</a></td>
+</tr>
+</table>
+
+<div>
+<h2>VENDOR REGISTRATION FORM</h2>
+
+<form>
+VENDOR ID : <input type="number" name="vid" #vid/> <br/>
+VENDOR FIRST NAME : <input type="text" name="fname" #fname/> <br/>
+VENDOR LAST NAME : <input type="text" name="lname" #lname/> <br/>
+VENDOR ADDRESS : <input type="text" name="add" #add/> <br/>
+VENDOR SHOPNAME : <input type="text" name="sname" #sname/> <br/>
+VENDOR MOBILE : <input type="number" name="mnumber" #mnumber/> <br/>
+VENDOR EMAIL : <input type="text" name="em" #em/> <br/>
+VENDOR PASSWORD : <input type="number" name="pwd" #pwd/> <br/>
+VENDOR LICENSE NUMBER : <input type="number" name="lnumber" #lnumber/> <br/>
+VENDOR ESTABLISHMENT YEAR : <input type="number" name="est" #est/> <br/>
+
+
+<input type="button" value="Register" (click)="insertVendordetails(vid.value,fname.value,lname.value,add.value,sname.value,mnumber.value,em.value,pwd.value,lnumber.value,est.value)"/>
+
+
+</form>
+</div>
