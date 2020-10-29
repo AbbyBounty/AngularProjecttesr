@@ -10,6 +10,7 @@ import { CommonModule } from "@angular/common";
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ServiceAddComponent } from './service-add/service-add.component';
 import { AvailableServicesComponent } from './available-services/available-services.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AvailableServicesComponent } from './available-services/available-servi
     OrderHistoryComponent,
     ServiceAddComponent,
     AvailableServicesComponent,
-    ServiceAddComponent
+    ServiceAddComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
