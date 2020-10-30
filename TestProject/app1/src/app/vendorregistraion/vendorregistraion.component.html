@@ -1,58 +1,159 @@
-<p>VENDORREGISTRATION WORKS!</p>
+<!--<div class="container md-col-4">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">VENDORID</th>
+                <th scope="col">FIRSTNAME</th>
+                <th scope="col">LASTNAME</th>
+                <th scope="col">ADDRESS</th>
+                <th scope="col">SHOPNAME</th>
+                <th scope="col">MOBILE NO</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">PASSWORD</th>
+                <th scope="col">LICENSE NUMBER</th>
+                <th scope="col">ESTABLISHMENT YEAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vendorreg of v;let i=index">
+                <td>{{vendorreg.vendorid}}</td>
+                <td>{{vendorreg.firstname | uppercase}}</td>
+                <td>{{vendorreg.lastname}}</td>
+                <td>{{vendorreg.vendoradd}}</td>
+                <td>{{vendorreg.shopname}}</td>
+                <td>{{vendorreg.mobile}}</td>
+                <td>{{vendorreg.email}}</td>
+                <td>{{vendorreg.password}}</td>
+                <td>{{vendorreg.licensenumber}}</td>
+                <td>{{vendorreg.vendoryear}}</td>
+                <td>
+                    <button style="margin-left: 10px;" class="btn btn-warning btn-sm">Edit</button>
+                    <button style="margin-left: 10px;" class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+-->
+
+<div class="card">
+    <div class="card-header">
+        <h4>Vendor Registration Form</h4>
+    </div>
+    <div class="card-body">
+        <div class="form">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">First Name</label>
+                        <input [(ngModel)]="firstname" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Last Name</label>
+                        <input [(ngModel)]="lastname" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Address</label>
+                        <input [(ngModel)]="vendoradd" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Shop Name</label>
+                        <input [(ngModel)]="shopname" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Mobile Number</label>
+                        <input [(ngModel)]="mobile" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input [(ngModel)]="email" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input [(ngModel)]="password" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Licence Number</label>
+                        <input [(ngModel)]="licensenumber" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Year Of Estiblish</label>
+                        <input [(ngModel)]="vendoryear" type="number" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <button class="btn btn-success">Register</button>
+                <a style="margin-left: 10px;" routerLink="/services" class="btn btn-danger">Cancel</a>
+            </div>
 
 
+        </div>
+    </div>
+</div>
+<!--
 <table border="1" style="border-collapse:collapse" *ngIf="v.length > 0">
-<tr>
-      <th>VENDORID</th>
-      <th>FIRSTNAME/th>
-      <th>LASTNAME</th>
-      <th>ADDRESS</th>
-      <th>SHOPNAME</th>
-      <th>MOBILE NO</th>
-      <th>EMAIL</th>
-      <th>PASSWORD</th>
-      <th>LICENSE NUMBER</th>
-      <th>ESTABLISHMENT YEAR</th>
-      
-
-</tr>
+    <tr>
+        <th>VENDORID</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>ADDRESS</th>
+        <th>SHOPNAME</th>
+        <th>MOBILE NO</th>
+        <th>EMAIL</th>
+        <th>PASSWORD</th>
+        <th>LICENSE NUMBER</th>
+        <th>ESTABLISHMENT YEAR</th>
+        <th></th>
 
 
+    </tr>
 
-<tr *ngFor="let vendorreg of v;let i=index">
-    <td>{{vendorreg.vendorid}}</td>
-    <td>{{vendorreg.firstname | uppercase}}</td>
-    <td>{{vendorreg.lastname}}</td>
-    <td>{{vendorreg.vendoradd}}</td>
-    <td>{{vendorreg.shopname}}</td>
-    <td>{{vendorreg.mobile}}</td>
-    <td>{{vendorreg.email}}</td>
-    <td>{{vendorreg.password}}</td>
-    <td>{{vendorreg.licensenumber}}</td>
-    <td>{{vendorreg.vendoryear}}</td>
-    <td>{{i}}</td>
-    <td><a href="#" (click)="deleteVendorDetails(i)">delete</a></td>
-</tr>
+
+
+    <tr *ngFor="let vendorreg of v;let i=index">
+        <td>{{vendorreg.vendorid}}</td>
+        <td>{{vendorreg.firstname | uppercase}}</td>
+        <td>{{vendorreg.lastname}}</td>
+        <td>{{vendorreg.vendoradd}}</td>
+        <td>{{vendorreg.shopname}}</td>
+        <td>{{vendorreg.mobile}}</td>
+        <td>{{vendorreg.email}}</td>
+        <td>{{vendorreg.password}}</td>
+        <td>{{vendorreg.licensenumber}}</td>
+        <td>{{vendorreg.vendoryear}}</td>
+        <td><a href="#" (click)="deleteVendorDetails(i)">delete</a></td>
+    </tr>
 </table>
 
 <div>
-<h2>VENDOR REGISTRATION FORM</h2>
+    <h2>VENDOR REGISTRATION FORM</h2>
 
-<form>
-VENDOR ID : <input type="number" name="vid" #vid/> <br/>
-VENDOR FIRST NAME : <input type="text" name="fname" #fname/> <br/>
-VENDOR LAST NAME : <input type="text" name="lname" #lname/> <br/>
-VENDOR ADDRESS : <input type="text" name="add" #add/> <br/>
-VENDOR SHOPNAME : <input type="text" name="sname" #sname/> <br/>
-VENDOR MOBILE : <input type="number" name="mnumber" #mnumber/> <br/>
-VENDOR EMAIL : <input type="text" name="em" #em/> <br/>
-VENDOR PASSWORD : <input type="number" name="pwd" #pwd/> <br/>
-VENDOR LICENSE NUMBER : <input type="number" name="lnumber" #lnumber/> <br/>
-VENDOR ESTABLISHMENT YEAR : <input type="number" name="est" #est/> <br/>
+    <form>
+        VENDOR ID : <input type="number" name="vid" #vid/> <br/> VENDOR FIRST NAME : <input type="text" name="fname" #fname/> <br/> VENDOR LAST NAME : <input type="text" name="lname" #lname/> <br/> VENDOR ADDRESS : <input type="text" name="add" #add/>        <br/> VENDOR SHOPNAME : <input type="text" name="sname" #sname/> <br/> VENDOR MOBILE : <input type="number" name="mnumber" #mnumber/> <br/> VENDOR EMAIL : <input type="text" name="em" #em/> <br/> VENDOR PASSWORD : <input type="number" name="pwd"
+            #pwd/> <br/> VENDOR LICENSE NUMBER : <input type="number" name="lnumber" #lnumber/> <br/> VENDOR ESTABLISHMENT YEAR : <input type="number" name="est" #est/> <br/>
 
 
-<input type="button" value="Register" (click)="insertVendordetails(vid.value,fname.value,lname.value,add.value,sname.value,mnumber.value,em.value,pwd.value,lnumber.value,est.value)"/>
+        <input type="button" value="Register" (click)="insertVendordetails(vid.value,fname.value,lname.value,add.value,sname.value,mnumber.value,em.value,pwd.value,lnumber.value,est.value)" />
 
 
-</form>
-</div>
+    </form>
+</div>-->
