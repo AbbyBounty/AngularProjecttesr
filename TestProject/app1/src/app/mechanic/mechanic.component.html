@@ -1,0 +1,41 @@
+
+
+<div class="container md-col-4">
+    <hr/>
+     <button (click)="addmechanic()" class="btn btn-success btn-sm float-right">Add</button>  
+     
+    <h3>List of Mechanics</h3>
+
+
+    <table class="table" border="1" style="border-collapse: collapse;">
+        <thead>
+            <th scope="col">Sr.No</th>
+            <th>Mechanic Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contact No</th>
+            <th>Experince</th>
+            <th>Experties</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mechanic of mechanics; let index=index;">
+                 
+                <td>{{index+1}}</td>
+                <td>{{mechanic['Mechanic_Id']}}</td>
+                <td>{{mechanic['Mechanic_First_Name']}}</td>
+                <td>{{mechanic['Mechanic_Last_Name']}}</td>
+                <td>{{mechanic['Mechanic_Contact_No']}}</td>
+                <td>{{mechanic['Mechanic_Experince']}}</td>
+                <td>{{mechanic['Mechanic_Experties']}}</td>
+               
+                <td>
+                    <button (click)="onEdit(mechanic)" style="margin-left: 10px;" class="btn btn-warning btn-sm">Edit</button>
+                    <button style="margin-left: 10px;" class="btn btn-danger btn-sm">Delete</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
