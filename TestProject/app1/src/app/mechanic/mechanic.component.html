@@ -1,42 +1,41 @@
-<p>mechanic works!</p>
 
-<div>
-<table border="1" style="border-collapse: collapse;">
-<th>Mechanic Id</th>
-<th>First Name</th>
-<th>Last Name</th>
-<th>Contact No</th>
-<th>Experince</th>
-<th>Experties</th>
 
-<tr  *ngFor="let Mechanic of mechanics; let i=index;">
+<div class="container md-col-4">
+    <hr/>
+     <button (click)="addmechanic()" class="btn btn-success btn-sm float-right">Add</button>  
+     
+    <h3>List of Mechanics</h3>
 
-<td>{{Mechanic.Mechanic_Id}}</td>
-<td>{{Mechanic.Mechanic_First_Name}}</td>
-<td>{{Mechanic.Mechanic_Last_Name}}</td>
-<td>{{Mechanic.Mechanic_Contact_No}}</td>
-<td>{{Mechanic.Mechanic_Experince}}</td>
-<td>{{Mechanic.Mechanic_Experties}}</td>
-<td>{{i}}</td>
-<td><a href="#" (click)="DeleteMech(i)">DELETE</a></td>
-</tr>
-</table>
+
+    <table class="table" border="1" style="border-collapse: collapse;">
+        <thead>
+            <th scope="col">Sr.No</th>
+            <th>Mechanic Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contact No</th>
+            <th>Experince</th>
+            <th>Experties</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mechanic of mechanics; let index=index;">
+                 
+                <td>{{index+1}}</td>
+                <td>{{mechanic['Mechanic_Id']}}</td>
+                <td>{{mechanic['Mechanic_First_Name']}}</td>
+                <td>{{mechanic['Mechanic_Last_Name']}}</td>
+                <td>{{mechanic['Mechanic_Contact_No']}}</td>
+                <td>{{mechanic['Mechanic_Experince']}}</td>
+                <td>{{mechanic['Mechanic_Experties']}}</td>
+               
+                <td>
+                    <button (click)="onEdit(mechanic)" style="margin-left: 10px;" class="btn btn-warning btn-sm">Edit</button>
+                    <button style="margin-left: 10px;" class="btn btn-danger btn-sm">Delete</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 
-<!-- Insert mechanics-->
-
-<br>
-<br>
-<div>
-<form>
-MechanicID -<input type="number" name=M_Id #id/><br>
-FirstName  -<input type="text" name="M_Firstnm" #fname/><br>
-Last_Name  -<input type="text" name="M_Lname" #lname /><br>
-Contact_No -<input type="number" name="M_Contact"#contact /><br>
-Experince  -<input type="text" name="M_Experince" #experince/><br>
-Experties  -<input type="text" name="M_Experties" #experties /><br>
-<input type="button" value="Register"(click)="Register_Mechanic(id.value,fname.value,lname.value,contact.value,experince.value,experties.value)"/>
-
-</form>
-</div>

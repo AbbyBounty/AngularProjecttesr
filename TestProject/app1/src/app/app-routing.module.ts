@@ -5,13 +5,16 @@ import { AvailableServicesComponent } from './available-services/available-servi
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { VendorregistraionComponent } from './vendorregistraion/vendorregistraion.component';
 import { MechanicComponent } from './mechanic/mechanic.component';
-
-const routes: Routes = [
- {path:'order-history',component:OrderHistoryComponent},
- {path:'services',component:AvailableServicesComponent},
- {path:'dashboard',component:DashboardComponent},
- {path:'vendorregister',component:VendorregistraionComponent},
- {path:'mechanic',component:MechanicComponent}
+import { ServiceAddComponent } from './service-add/service-add.component';
+import { MechanicAddComponent } from './mechanic-add/mechanic-add.component';
+const routes: Routes=[
+  {path:'order-history',component:OrderHistoryComponent},
+  {path:'services',component:AvailableServicesComponent},
+  {path:'dashboard',component:DashboardComponent},
+  {path:'vendorregister',component:VendorregistraionComponent},
+  {path:'service-add',component:ServiceAddComponent},
+  {path:'mechanic',component:MechanicComponent},
+  {path:'mechanic-add',component:MechanicAddComponent}
 ];
 
 @NgModule({

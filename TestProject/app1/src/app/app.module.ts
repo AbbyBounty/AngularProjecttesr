@@ -5,20 +5,30 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VendorregistraionComponent } from './vendorregistraion/vendorregistraion.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+import { CommonModule } from "@angular/common";
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { ServiceAddComponent } from './service-add/service-add.component';
+import { AvailableServicesComponent } from './available-services/available-services.component';
 import { MechanicComponent } from './mechanic/mechanic.component';
+import { MechanicAddComponent } from './mechanic-add/mechanic-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VendorregistraionComponent,
-    MechanicComponent
+    OrderHistoryComponent,
+    ServiceAddComponent,
+    AvailableServicesComponent,
+    ServiceAddComponent,
+    MechanicComponent,
+    MechanicAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
