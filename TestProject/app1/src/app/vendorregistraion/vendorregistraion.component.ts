@@ -9,7 +9,16 @@ import { vendorreg } from '../vendorregistration';
 export class VendorregistraionComponent implements OnInit {
 
         v:vendorreg[];
-
+        vendorid=null;
+        firstname=" ";
+        lastname=" ";
+        vendoradd=" ";
+        shopname=" ";
+        mobile=null;
+        email=" ";
+        password=null;
+        licensenumber=null;
+        vendoryear=null;
 
   constructor() {
    

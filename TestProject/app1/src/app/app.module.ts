@@ -10,8 +10,7 @@ import { CommonModule } from "@angular/common";
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ServiceAddComponent } from './service-add/service-add.component';
 import { AvailableServicesComponent } from './available-services/available-services.component';
-import { MechanicComponent } from './mechanic/mechanic.component';
-import { MechanicAddComponent } from './mechanic-add/mechanic-add.component';
+import { ActiveOrderComponent } from './active-order/active-order.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { MechanicAddComponent } from './mechanic-add/mechanic-add.component';
     ServiceAddComponent,
     AvailableServicesComponent,
     ServiceAddComponent,
-    MechanicComponent,
-    MechanicAddComponent
+    ActiveOrderComponent
   ],
   imports: [
     BrowserModule,
