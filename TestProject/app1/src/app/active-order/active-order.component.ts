@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-active-order',
   templateUrl: './active-order.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiveOrderComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +21,8 @@ export class ActiveOrderComponent implements OnInit {
   ]
 showActiveOrders(){
   
+}
+  activeOrder(activeorder) {
+  this.router.navigate(['/service-details'], {queryParams: {num: activeorder['Vehicle Number']}});
 }
 }

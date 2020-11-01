@@ -11,6 +11,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { ServiceAddComponent } from './service-add/service-add.component';
 import { AvailableServicesComponent } from './available-services/available-services.component';
 import { ActiveOrderComponent } from './active-order/active-order.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ActiveOrderComponent } from './active-order/active-order.component';
     ServiceAddComponent,
     AvailableServicesComponent,
     ServiceAddComponent,
-    ActiveOrderComponent
+    ActiveOrderComponent,
+    ServiceDetailsComponent,
   ],
   imports: [
     BrowserModule,

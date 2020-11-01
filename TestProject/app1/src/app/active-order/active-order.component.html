@@ -16,19 +16,19 @@
                                 <th>Customer Name</th>
                                 <th>Date</th>
                                 <th>Vehicle Number</th>
-                                <th>Service Name</th>
+                                <th>Service Details</th>
                             </tr>
 
                         </thead>
 
                         <tbody>
-                            <tr *ngFor="let activeOrder of activeOrders; let index=index">
+                            <tr *ngFor="let activeorder of activeOrders; let index=index">
                                 <td>{{index+1}}</td>
-                                <td>{{activeOrder['Order Id']}}</td>
-                                <td>{{activeOrder['Customer Name']}}</td>
-                                <td>{{activeOrder['Date']}}</td>
-                                <td>{{activeOrder['Vehicle Number']}}</td>
-                                <td>{{activeOrder['Service Name']}}</td>
+                                <td>{{activeorder['Order Id']}}</td>
+                                <td>{{activeorder['Customer Name']}}</td>
+                                <td>{{activeorder['Date']}}</td>
+                                <td>{{activeorder['Vehicle Number']}}</td>
+                                <td><button (click)="activeOrder(activeorder)" style="margin-left: 10px;" class="btn btn-warning btn-sm">View Details</button></td>
 
                             </tr>
                         </tbody>
