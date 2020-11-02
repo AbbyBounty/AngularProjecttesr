@@ -1,4 +1,49 @@
-<p>Service Details Page</p>
-<div>
-    <h1>Welcome {{CustomerName}}</h1>
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Welcome{{CustomerName}}</h3>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Order Id:{{OrderId}}</h5>
+                        <h5>Order Date:{{orderDate}}</h5>
+                        <h5>Vechicle No:{{VehicleNumber}}</h5>
+                        <h6>Customer Name:{{CustomerName}}</h6>
+                    </div>
+                    <div class="card-body">
+                        service details
+                        <div class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sr. No.</th>
+                                    <th>Service Id</th>
+                                    <th>Service Name</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let activeOrder of activeOrders; let index=index">
+                                    <td>{{index+1}}</td>
+                                    <td>{{activeOrder['ServiceId']}}</td>
+                                    <td>{{activeOrder['ServiceName']}}</td>
+                                    <td>{{activeOrder['Description']}}</td>
+                                    <td>{{activeOrder['Amount']}}</td>
+
+                                </tr>
+                            </tbody>
+                        </div>
+                    </div>
+
+                    <div class="card-footer"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 </div>
