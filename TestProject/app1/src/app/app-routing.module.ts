@@ -4,6 +4,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { AvailableServicesComponent } from './available-services/available-services.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { VendorregistraionComponent } from './vendorregistraion/vendorregistraion.component';
+import { MechanicComponent } from './mechanic/mechanic.component';
 import { ServiceAddComponent } from './service-add/service-add.component';
 import { ActiveOrderComponent } from './active-order/active-order.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
